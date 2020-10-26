@@ -28,9 +28,12 @@ const Services = () => {
             <div className="container">
                 <h2 className="text-brand text-center mb-5">Provide awesome
                 <span className="text-success"> services</span></h2>
-                <div class="card-columns text-center">
+                <div className="card-columns text-center">
                     {
-                        services.map(service => <Service service={service}></Service>) 
+                        services.map((service, index) => <Service 
+                        service={service} 
+                        key={index}
+                        ></Service>) 
                     }
                 </div>
             </div>
