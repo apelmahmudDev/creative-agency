@@ -1,0 +1,11 @@
+.header-contianer {
+    height: 850px;
+    background-color: #FBD062;
+    padding: 200px 0;
+    transform: skew(0deg, -3deg);
+    margin-top: -200px;  
+}
+
+.content {
+    transform: skew(0deg, 3deg);
+}
