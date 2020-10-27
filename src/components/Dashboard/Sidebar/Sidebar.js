@@ -8,7 +8,9 @@ import { faShoppingCart, faListUl, faCommentDots, faPlus, faUserFriends } from '
 const Sidebar = () => {
 	return (
 		<div className="sidebar-container">
-			<div className="sidebar-heading mb-3"><img src={logo} alt="" width="150" /></div>
+			<div className="sidebar-heading mb-3">
+				<Link to="/"><img src={logo} alt="" width="150" /></Link>
+			</div>
 			<div className="list-group list-group-flush">
 				<Link to="/dashboard/order" className="list-group-item list-group-item-action">
 					 <FontAwesomeIcon icon={faShoppingCart} /><span> Order</span>

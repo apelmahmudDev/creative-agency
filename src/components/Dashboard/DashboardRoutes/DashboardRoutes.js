@@ -10,7 +10,7 @@ const DashboardRoutes = () => {
     return (
         <div>
             <Route exact path="/dashboard" component={Order} />
-            <Route path="/dashboard/order" component={Order} />
+            <Route path="/dashboard/order/:serviceId" component={Order} />
             <Route path="/dashboard/review" component={Review} />
             <Route path="/dashboard/service" component={ServiceList} />
             <Route path="/dashboard/add-service" component={AddServices} />

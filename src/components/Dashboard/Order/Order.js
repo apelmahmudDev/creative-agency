@@ -1,7 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useParams } from 'react-router-dom';
 
 const Order = () => {
+    let {serviceId} = useParams();
+    console.log(serviceId)
+
+    // fetch(`/`)
 
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => console.log(data);
