@@ -30,6 +30,11 @@ const AddServices = () => {
                             {errors.title && <span className="text-danger">Title is required</span>}
                         </div>
                         <div className="form-group">
+                            <label htmlFor="price"><strong className="text-brand">Service Price</strong></label>
+                            <input name="price" id="price" ref={register({ required: true })} placeholder="Enter price" className="form-control"/>
+                            {errors.price && <span className="text-danger">Price is required</span>}
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="description"><strong className="text-brand">Description</strong></label>
                             <textarea rows="3" id="description" name="description" ref={register({ required: true })} placeholder="Enter Description" className="form-control" />
                             {errors.description && <span className="text-danger">Description is required</span>}
