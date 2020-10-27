@@ -1,32 +1,33 @@
-import React from 'react';
-import customer1 from '../../../images/customer-1.png';
-import customer2 from '../../../images/customer-2.png';
-import customer3 from '../../../images/customer-3.png';
+import React, { useEffect, useState } from 'react';
 import Feedback from '../Feedback/Feedback';
 
 
 const ClientFeedback = () => {
-    const clientsFeedback = [
-        {
-            img: customer1,
-            name: 'Bria Malone',
-            title: 'CEO, Manpol',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat.',
-        },
-        {
-            img: customer2,
-            name: 'Nash Patrik',
-            title: 'CEO, Manpol',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat.',
-        },
-        {
-            img: customer3,
-            name: 'Miriam Baron',
-            title: 'CEO, Manpol',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat.',
-        }
+    const [clientsFeedback, setClientsFeedback] = useState([]);
 
-    ]
+    // READ ALL FEEDBACK FROM THE DATABASE
+    useEffect(() => {
+        fetch('http://localhost:4200/feedback')
+        .then(res => res.json())
+        .then(data => {
+            setClientsFeedback(data)
+        })
+    },[])
+
+    // INSERT FEEDBACK AT THE DATABASE
+    // const handleFeedback = () => {
+    //     fetch('http://localhost:4200/addFeedback', {
+    //         method: 'POST',
+    //         headers: {'Content-Type': 'application/json'},
+    //         body: JSON.stringify(clientsFeedback)
+    //     })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log('Succuessfully added feedback')
+    //     })
+    // }
+
+
     return (
         <section className="my-5 py-5">
             <div className="container">

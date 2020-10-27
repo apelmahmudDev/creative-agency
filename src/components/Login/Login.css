@@ -1,0 +1,15 @@
+.login-area {
+    margin: 3% auto;
+    height: 350px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-btn {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid lightgrey;
+    border-radius: 30px;
+}

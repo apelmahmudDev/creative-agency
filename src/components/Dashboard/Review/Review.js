@@ -4,7 +4,22 @@ import { useForm } from "react-hook-form";
 const Review = () => {
 
     const { register, handleSubmit, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = feedback => {
+        // INSERT FEEDBACK AT THE DATABASE
+        fetch('http://localhost:4200/addFeedback', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify(feedback),
+        })
+        .then((res) => res.json())
+        .then(data => {
+            if(data){
+                alert('Your Feedback is accepted, Thanks for your feedback.')
+            }
+        })
+    };
+
+     
 
     return (
         <div className="container mt-5">
@@ -16,7 +31,7 @@ const Review = () => {
                             {errors.name && <span className="text-danger">Name is required</span>}
                         </div>
                         <div className="form-group">
-                            <input name="companyName" ref={register({ required: true })} placeholder="Your company's name, Designation" className="form-control" />
+                            <input name="title" ref={register({ required: true })} placeholder="Your company's name, Designation" className="form-control" />
                             {errors.companyName && <span className="text-danger">Company name is required</span>}
                         </div>
                         <div className="form-group">

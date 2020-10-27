@@ -4,7 +4,20 @@ import { useForm } from "react-hook-form";
 const AddServices = () => {
 
     const { register, handleSubmit, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = service => {
+        // INSERT SERVICES AT THE DATABASE
+        fetch('http://localhost:4200/addService', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify(service),
+        })
+        .then((res) => res.json())
+        .then(data => {
+            if(data){
+                alert('Your Service added successfully!')
+            }
+        })
+    };
 
     return (
         <div className="container mt-5">
