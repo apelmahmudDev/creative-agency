@@ -14,3 +14,9 @@
 .text-brand {
     color: #111430;
 }
+
+.form-area {
+    background-color: #ffffff;
+    padding: 4%;
+    border-radius: 20px;
+}
