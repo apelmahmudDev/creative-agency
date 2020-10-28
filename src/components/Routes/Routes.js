@@ -14,6 +14,9 @@ const Routes = () => {
             <PrivateRoute path="/dashboard">
                 <Dashboard></Dashboard>
             </PrivateRoute>
+            <Route path="*">
+                <h2>The page not found!</h2>
+            </Route>
         </Switch>
     );
 };

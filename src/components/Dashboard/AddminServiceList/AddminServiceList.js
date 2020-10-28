@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 const AddminServiceList = () => {
     const [orderedLists, setOrderedLists] = useState([]);
@@ -23,7 +23,7 @@ const AddminServiceList = () => {
     return (
         <div className="table-responsive-md" style={tableStyles}>
             <table className="table table-borderless">
-                <thead>
+                <thead className="bg-light">
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Email ID</th>
@@ -43,7 +43,7 @@ const AddminServiceList = () => {
                             <td>${service.price}</td>
                             <td>
                                 <span>Pending </span>
-                                <FontAwesomeIcon icon={faChevronDown} />
+                                <FontAwesomeIcon icon={faCaretDown} />
                             </td>
                         </tr>
                         )

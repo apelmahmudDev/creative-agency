@@ -5,7 +5,7 @@ import logo from '../../../images/logos/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faListUl, faCommentDots, faPlus, faUserFriends } from '@fortawesome/free-solid-svg-icons'
 
-const Sidebar = () => {
+const Sidebar = ({isAdmin}) => {
 	return (
 		<div className="sidebar-container">
 			<div className="sidebar-heading mb-3">
@@ -23,14 +23,18 @@ const Sidebar = () => {
 				<Link to="/dashboard/review" className="list-group-item list-group-item-action">
 					<FontAwesomeIcon icon={faCommentDots} /><span> Review</span>
 				</Link>
-
-				<Link to="/dashboard/add-service" className="list-group-item list-group-item-action">
-					<FontAwesomeIcon icon={faPlus} /><span> Add Service</span>
-					</Link>
-					
-				<Link to="/dashboard/admin" className="list-group-item list-group-item-action">
-					<FontAwesomeIcon icon={faUserFriends} /> <span>Make Admin</span>
-				</Link>
+				
+				{isAdmin && 
+					<div>
+						<Link to="/dashboard/add-service" className="list-group-item list-group-item-action">
+							<FontAwesomeIcon icon={faPlus} /><span> Add Service</span>
+						</Link>
+							
+						<Link to="/dashboard/admin" className="list-group-item list-group-item-action">
+							<FontAwesomeIcon icon={faUserFriends} /> <span>Make Admin</span>
+						</Link>
+					</div>
+				}
 			</div>
 		</div>
 	);

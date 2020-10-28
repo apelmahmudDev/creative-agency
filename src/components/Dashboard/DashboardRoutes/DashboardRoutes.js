@@ -6,16 +6,22 @@ import Order from '../Order/Order';
 import Review from '../Review/Review';
 import ServiceList from '../ServiceList/ServiceList';
 
-const DashboardRoutes = () => {
+const DashboardRoutes = ({isAdmin}) => {
+
     return (
         <div>
             <Route exact path="/dashboard" component={Order} />
             <Route exact path="/dashboard/order" component={Order} />
             <Route path="/dashboard/order/:serviceId" component={Order} />
             <Route path="/dashboard/review" component={Review} />
-            <Route path="/dashboard/service" component={ServiceList} />
+            {/* <Route path="/dashboard/service" component={ServiceList} /> */}
+
+            <Route path="/dashboard/service">
+                <ServiceList isAdmin={isAdmin}></ServiceList>
+            </Route>
+
             <Route path="/dashboard/add-service" component={AddServices} />
-            <Route path="/dashboard/admin" component={Admin} />
+            {isAdmin && <Route path="/dashboard/admin" component={Admin} />}
         </div>
     );
 };
