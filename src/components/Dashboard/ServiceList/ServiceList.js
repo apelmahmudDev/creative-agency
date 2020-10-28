@@ -1,4 +1,5 @@
 import React from 'react';
+import AddminServiceList from '../AddminServiceList/AddminServiceList';
 import ClientServiceList from '../ClientServiceList/ClientServiceList';
 
 const ServiceList = () => {
@@ -9,7 +10,8 @@ const ServiceList = () => {
 	// }
 	return (
 		<div className="container mt-5">
-			<ClientServiceList></ClientServiceList>
+			{/* <ClientServiceList></ClientServiceList> */}
+			<AddminServiceList></AddminServiceList>
 		</div>
 	);
 };
