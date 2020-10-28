@@ -1,0 +1,18 @@
+.client-card {
+    border: transparent !important;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.actionChanger {
+    background-color: #F4F7FC;
+    height: 35px;
+    padding: 3px 10px;
+    color: #28A745;
+    border-radius: 5px;
+}
+
+.client-card img {
+    height: 60px;
+    width: 60px;
+}
