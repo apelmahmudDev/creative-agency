@@ -3,6 +3,7 @@
  }
 
 #sidebar-wrapper {
+  border: 0 !important;
   min-height: 100vh;
   margin-left: -15rem;
   -webkit-transition: margin .25s ease-out;

@@ -1,9 +1,12 @@
-.card-columns .card {
+.client-card {
     border: none;
     padding: 5%;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
     
 }
 
-.card-columns .card:hover {
-    box-shadow: 0px 5px 10px #d3d3d3;
+.client-card:hover {
+    box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }

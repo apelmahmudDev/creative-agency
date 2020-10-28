@@ -12,19 +12,12 @@ const Sidebar = ({isAdmin}) => {
 				<Link to="/"><img src={logo} alt="" width="150" /></Link>
 			</div>
 			<div className="list-group list-group-flush">
-				<Link to="/dashboard/order" className="list-group-item list-group-item-action">
-					 <FontAwesomeIcon icon={faShoppingCart} /><span> Order</span>
-				</Link>
 
 				<Link to="/dashboard/service" className="list-group-item list-group-item-action">
 					<FontAwesomeIcon icon={faListUl} /><span> Service list</span>
 				</Link>
 
-				<Link to="/dashboard/review" className="list-group-item list-group-item-action">
-					<FontAwesomeIcon icon={faCommentDots} /><span> Review</span>
-				</Link>
-				
-				{isAdmin && 
+				{isAdmin ?
 					<div>
 						<Link to="/dashboard/add-service" className="list-group-item list-group-item-action">
 							<FontAwesomeIcon icon={faPlus} /><span> Add Service</span>
@@ -32,6 +25,16 @@ const Sidebar = ({isAdmin}) => {
 							
 						<Link to="/dashboard/admin" className="list-group-item list-group-item-action">
 							<FontAwesomeIcon icon={faUserFriends} /> <span>Make Admin</span>
+						</Link>
+					</div>
+					:
+					<div>
+						<Link to="/dashboard/order" className="list-group-item list-group-item-action">
+							<FontAwesomeIcon icon={faShoppingCart} /><span> Order</span>
+						</Link>
+
+						<Link to="/dashboard/review" className="list-group-item list-group-item-action">
+							<FontAwesomeIcon icon={faCommentDots} /><span> Review</span>
 						</Link>
 					</div>
 				}

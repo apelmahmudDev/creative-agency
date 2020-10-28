@@ -14,26 +14,12 @@ const ClientFeedback = () => {
         })
     },[])
 
-    // INSERT FEEDBACK AT THE DATABASE
-    // const handleFeedback = () => {
-    //     fetch('http://localhost:4200/addFeedback', {
-    //         method: 'POST',
-    //         headers: {'Content-Type': 'application/json'},
-    //         body: JSON.stringify(clientsFeedback)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         console.log('Succuessfully added feedback')
-    //     })
-    // }
-
-
     return (
         <section className="my-5 py-5">
             <div className="container">
                 <h2 className="text-brand text-center mb-5">Clients 
                 <span className="text-success"> Feedback</span></h2>
-                <div className="card-columns">
+                <div className="row row-cols-1 row-cols-md-3">
                     {
                         clientsFeedback.map((client, index) => <Feedback 
                         client={client} 
