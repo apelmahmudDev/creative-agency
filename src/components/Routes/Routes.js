@@ -3,6 +3,7 @@ import { Switch, Route, } from "react-router-dom";
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
 import Home from '../Home/Home/Home';
 import Login from '../Login/Login';
+import NotFound from '../NotFound/NotFound';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const Routes = () => {
@@ -15,7 +16,7 @@ const Routes = () => {
                 <Dashboard></Dashboard>
             </PrivateRoute>
             <Route path="*">
-                <h2>The page not found!</h2>
+                <NotFound></NotFound>
             </Route>
         </Switch>
     );

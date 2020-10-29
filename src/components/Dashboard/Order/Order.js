@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../../UserContext/UserContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Order = () => {
     const [user, setUser] = useContext(UserContext);
