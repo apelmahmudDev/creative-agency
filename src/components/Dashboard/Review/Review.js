@@ -6,7 +6,7 @@ const Review = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = feedback => {
         // INSERT FEEDBACK AT THE DATABASE
-        fetch('http://localhost:4200/addFeedback', {
+        fetch('https://peaceful-cove-72693.herokuapp.com/addFeedback', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(feedback),

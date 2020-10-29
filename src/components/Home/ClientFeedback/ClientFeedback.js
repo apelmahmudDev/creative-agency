@@ -8,7 +8,7 @@ const ClientFeedback = () => {
 
     // READ ALL FEEDBACK FROM THE DATABASE
     useEffect(() => {
-        fetch('http://localhost:4200/feedback')
+        fetch('https://peaceful-cove-72693.herokuapp.com/feedback')
         .then(res => res.json())
         .then(data => {
             setClientsFeedback(data)

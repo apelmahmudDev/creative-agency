@@ -12,12 +12,13 @@ const DashboardRoutes = ({isAdmin}) => {
         <>
             <Route exact path="/dashboard" component={Order} />
             <Route exact path="/dashboard/order" component={Order} />
+            <Route path="/dashboard/order/:serviceId" component={Order} />
+            <Route path="/dashboard/review" component={Review} />
             <Route path="/dashboard/service">
                 <ServiceList isAdmin={isAdmin}></ServiceList>
             </Route>
-            <Route path="/dashboard/order/:serviceId" component={Order} />
-            <Route path="/dashboard/review" component={Review} />
-            {isAdmin && <div>
+            {isAdmin && 
+            <div>
                 <Route path="/dashboard/add-service" component={AddServices} />
                 <Route path="/dashboard/admin" component={Admin} />
             </div>}

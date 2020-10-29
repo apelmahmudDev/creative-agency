@@ -8,7 +8,7 @@ const Services = () => {
     
     // READ ALL SERVICES FROM THE DATABASE
     useEffect(() => {
-        fetch('http://localhost:4200/services')
+        fetch('https://peaceful-cove-72693.herokuapp.com/services')
         .then(res => res.json())
         .then(data => {
             setServices(data)

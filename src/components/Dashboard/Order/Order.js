@@ -18,7 +18,7 @@ const Order = () => {
 
     //READ A SPEACIFIC SERVICE USING PARAMS
     useEffect(() => {
-        fetch(`http://localhost:4200/order/${serviceId}`)
+        fetch(`https://peaceful-cove-72693.herokuapp.com/order/${serviceId}`)
         .then(res => res.json())
         .then(data => {
             setService(data)
@@ -29,7 +29,7 @@ const Order = () => {
     const onSubmit = order => {
         order.img = service.img;
         // INSERT ORDER AT THE DATABASE
-        fetch('http://localhost:4200/addOrder', {
+        fetch('https://peaceful-cove-72693.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(order)
@@ -79,7 +79,7 @@ const Order = () => {
             </div>
             :
             <div>
-                <h3 className="text-brand my-3">You have to select the service item first.</h3>
+                <h3 className="text-brand my-3">You have to select the service item first to <span className="text-success">order.</span></h3>
                 <Link to="/">
                     <button className="btn btn-dark">
                         <FontAwesomeIcon icon={faAngleLeft} />

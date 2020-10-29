@@ -7,7 +7,7 @@ const AddminServiceList = () => {
 
     // READ ALL ORDERED SERVICES FOR ADMIN
     useEffect(() => {
-        fetch('http://localhost:4200/orderdServices')
+        fetch('https://peaceful-cove-72693.herokuapp.com/orderdServices')
         .then(res => res.json())
         .then(data => {
             setOrderedLists(data)

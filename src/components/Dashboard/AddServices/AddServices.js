@@ -6,7 +6,7 @@ const AddServices = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = service => {
         // INSERT SERVICES AT THE DATABASE
-        fetch('http://localhost:4200/addService', {
+        fetch('https://peaceful-cove-72693.herokuapp.com/addService', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(service),

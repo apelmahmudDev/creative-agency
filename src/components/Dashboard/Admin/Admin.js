@@ -10,7 +10,7 @@ const Admin = () => {
     
     const onSubmit = email => {
         // INSERT A ADMIN AT THE DATABASE
-        fetch('http://localhost:4200/admin', {
+        fetch('https://peaceful-cove-72693.herokuapp.com/admin', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(email),

@@ -12,7 +12,7 @@ const Dashboard = () => {
 	
     // FIND ADMIN
     useEffect(() => {
-        fetch(`http://localhost:4200/findAdmin?email=${user.email}`)
+        fetch(`https://peaceful-cove-72693.herokuapp.com/findAdmin?email=${user.email}`)
         .then(res => res.json())
         .then(result => {
             setIsAdmin(true);
