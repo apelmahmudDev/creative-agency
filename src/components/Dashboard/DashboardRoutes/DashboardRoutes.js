@@ -11,7 +11,7 @@ const DashboardRoutes = ({isAdmin}) => {
     return (
         <>
             <Route exact path="/dashboard" component={Order} />
-            <Route path="/dashboard/order" component={Order} />
+            <Route exact path="/dashboard/order" component={Order} />
             <Route path="/dashboard/service">
                 <ServiceList isAdmin={isAdmin}></ServiceList>
             </Route>

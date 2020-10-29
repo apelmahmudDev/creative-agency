@@ -30,9 +30,9 @@ const Clients = () => {
         }
     ];
     return (
-        <section className="my-5 py-5">
+        <section className="mt-5 pt-5">
             <div className="container">
-                <div className="row d-flex justify-content-around">
+                <div className="row row-cols-2 row-cols-md-5 text-center">
                    {
                        clients.map(client => <Client client={client} key={client.key}></Client>)
                    }

@@ -1,15 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../../UserContext/UserContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Order = () => {
     const [user, setUser] = useContext(UserContext);
     const [isPlaced, setIsPlaced] = useState(false);
     const [service, setService] = useState({});
     let {serviceId} = useParams();
+
+    let isServiceId = false;
+    if(serviceId){
+        isServiceId = true;
+    }
 
     //READ A SPEACIFIC SERVICE USING PARAMS
     useEffect(() => {
@@ -39,7 +44,7 @@ const Order = () => {
 
     return (
         <div className="container mt-5">
-            <div className="row form-area">
+           {isServiceId ? <div className="row form-area">
                 <div className="col-md-7">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
@@ -72,6 +77,16 @@ const Order = () => {
                     
                 </div>
             </div>
+            :
+            <div>
+                <h3 className="text-brand my-3">You have to select the service item first.</h3>
+                <Link to="/">
+                    <button className="btn btn-dark">
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                        <span> Select Item</span>
+                    </button>
+                </Link>
+            </div>}
         </div>
     );
 };
