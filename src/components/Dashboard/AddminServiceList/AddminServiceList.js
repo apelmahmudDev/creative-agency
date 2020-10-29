@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import TableData from '../TableData/TableData';
 
 const AddminServiceList = () => {
     const [orderedLists, setOrderedLists] = useState([]);
@@ -33,21 +32,12 @@ const AddminServiceList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                    orderedLists.map((service) => 
-                            
-                        <tr key={service._id}>
-                            <td>{service.name}</td>
-                            <td>{service.email}</td>
-                            <td>{service.title}</td>
-                            <td>${service.price}</td>
-                            <td>
-                                <span>Pending </span>
-                                <FontAwesomeIcon icon={faCaretDown} />
-                            </td>
-                        </tr>
-                        )
-                    }
+                {
+                    orderedLists.map(service => <TableData 
+                        service={service}
+                        key={service._id}
+                        ></TableData>)
+                }
                 </tbody>
             </table>
         </div>

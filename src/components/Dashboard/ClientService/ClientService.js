@@ -7,7 +7,7 @@ const ClientService = ({orderlist}) => {
                 <div className="card-body">
                     <div className="d-flex align-items-center justify-content-between mb-3">
                         <img src={orderlist.img} className="card-img-top" alt=""/>
-                        <p className="actionChanger">Pending</p>
+                        <p className="actionChanger">{orderlist.status}</p>
                     </div>
                     <h5 className="card-title text-brand">{orderlist.title}</h5>
                     <p className="card-text">{orderlist.description}</p>

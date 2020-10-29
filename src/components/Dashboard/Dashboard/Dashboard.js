@@ -8,7 +8,6 @@ import './Dashboard.css';
 const Dashboard = () => {
 	const [user, setUser] = useContext(UserContext);
 	const [isAdmin, setIsAdmin] = useState(false);
-	console.log(isAdmin)
 	
     // FIND ADMIN
     useEffect(() => {

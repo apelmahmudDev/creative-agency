@@ -28,6 +28,7 @@ const Order = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = order => {
         order.img = service.img;
+        order.status = 'Pending';
         // INSERT ORDER AT THE DATABASE
         fetch('https://peaceful-cove-72693.herokuapp.com/addOrder', {
             method: 'POST',
