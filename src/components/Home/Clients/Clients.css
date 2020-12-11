@@ -1,0 +1,22 @@
+
+/* RESPONSIVE-AREA */
+
+@media only screen and (max-width: 768px) {
+    .clients-wrapper {
+        margin-top: 5%;
+    }
+    .clients-wrapper img {
+        height: 40px;
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .clients-wrapper {
+        margin-top: 0;
+    }
+    .clients-wrapper img {
+        height: 30px;
+        width: 110px;
+    }
+}

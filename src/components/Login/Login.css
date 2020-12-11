@@ -13,3 +13,12 @@
     border: 2px solid lightgrey;
     border-radius: 30px;
 }
+
+@media only screen and (max-width: 344px) {
+    .sign-btn img {
+        height: 20px;
+    }
+    .sign-btn {
+        font-size: 14px;
+    }
+}

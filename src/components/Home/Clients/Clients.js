@@ -1,4 +1,5 @@
 import React from 'react';
+import './Clients.css';
 import slack from '../../../images/logos/slack.png';
 import google from '../../../images/logos/google.png';
 import uber from '../../../images/logos/uber.png';
@@ -31,7 +32,7 @@ const Clients = () => {
     ];
     return (
         <section className="mt-5 pt-5">
-            <div className="container">
+            <div className="container clients-wrapper">
                 <div className="row row-cols-2 row-cols-md-5 text-center">
                    {
                        clients.map(client => <Client client={client} key={client.key}></Client>)

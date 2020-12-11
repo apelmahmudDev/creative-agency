@@ -18,7 +18,7 @@ const Services = () => {
     return (
         <section className="my-5 py-5">
             <div className="container">
-                <h2 className="text-brand text-center mb-5">Provide awesome
+                <h2 className="text-brand text-center mb-5 services-title">Provide awesome
                 <span className="text-success"> services</span></h2>
                 {services.length > 0 ? <div className="row row-cols-1 row-cols-md-3 text-center">
                     {

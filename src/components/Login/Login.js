@@ -52,7 +52,7 @@ const Login = () => {
                         <img className="mr-2" src={google} alt=""/>
                         Continue with Google Login
                     </button>
-                    <p className="mt-2">Don't have an account? <span className="text-primary">Create an account</span></p>
+                    <p className="mt-2">Don't have an account? <span className="text-primary" role="button" onClick={handleSignWithGoogle}>Create an account</span></p>
                 </div>
             </div>
         </div>

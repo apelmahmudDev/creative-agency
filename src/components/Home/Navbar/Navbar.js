@@ -19,8 +19,8 @@ const Navbar = () => {
                 <div className="navbar-nav ml-auto">
                     <NavLink className="nav-link" to="/">Home <span className="sr-only">(current)</span></NavLink>
                     <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
-                    <NavLink className="nav-link" to="/">Our Team</NavLink>
-                    <NavLink className="nav-link" to="/">Contact Us</NavLink>
+                    <NavLink className="nav-link" to="/team">Our Team</NavLink>
+                    <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
                     {user.isSigned ? <h5 className="text-brand mt-2">{user.name}</h5> :
                     <NavLink className="nav-link btn-brand text-white" to="/login">Login</NavLink>}
                 </div>
